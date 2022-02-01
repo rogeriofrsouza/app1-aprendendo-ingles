@@ -1,0 +1,47 @@
+<div class="container">
+  <div class="p-5 mb-4 bg-light rounded-3 mt-4">   <!-- Jumbotron -->
+
+    <!-- 1. Progresso & Tentativas -->
+    <div class="row">
+      <div class="col-sm-6">
+        <app-progresso [progresso]="progresso"></app-progresso>
+      </div>
+
+      <div class="col-sm-6">
+        <div class="d-flex justify-content-end">
+          <app-tentativas [tentativas]="tentativas"></app-tentativas>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2. Textos & textarea -->
+    <div class="row">
+      <div class="col mt-4">
+        <h6>{{ instrucao }}</h6>
+        <p>{{ rodadaFrase.fraseEng }}</p>
+
+        <div class="form-group mb-3">
+          <textarea
+            #myInput
+            class="form-control"
+            rows="3"
+            (input)="atualizaResposta($event)"
+            [value]="resposta"
+            (keydown.enter)="verificarResposta();false"
+          ></textarea>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3. Button -->
+    <div class="row">
+      <div class="col">
+        <div class="d-flex justify-content-end">
+          <button type="button" class="btn btn-primary" (click)="verificarResposta()">
+            Verificar
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
