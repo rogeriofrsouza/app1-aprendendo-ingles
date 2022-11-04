@@ -8,12 +8,11 @@ export class Coracao {
 
   public exibeCoracao(): string {
     if (this.cheio) {
-      this.alt = 'Coração cheio'
+      this.alt = 'Coração cheio';
       return this.urlCoracaoCheio;
-
-    } else {
-      this.alt = 'Coração vazio'
-      return this.urlCoracaoVazio;
     }
+
+    this.alt = 'Coração vazio';
+    return this.urlCoracaoVazio;
   }
 }

@@ -1,12 +1,10 @@
-export interface FraseModel {
+export interface Frase {
   fraseEng: string,
   frasePtBr: string
 }
 
-//-- Código de aula
 /*
-export class Frase {
-
-  constructor(public fraseEng: string, public frasePtBr: string) { }
-}
+  export class Frase {
+    constructor(public fraseEng: string, public frasePtBr: string) { }
+  }
 */

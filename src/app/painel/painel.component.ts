@@ -1,6 +1,6 @@
-import { Component, ElementRef, EventEmitter, OnDestroy, OnInit, Output, ViewChild } from '@angular/core';
+import { Component, ElementRef, EventEmitter, OnInit, Output, ViewChild } from '@angular/core';
 
-import { FraseModel } from '../shared/frase.model';
+import { Frase } from '../shared/frase.model';
 import { FRASES } from './frases-mock';
 
 @Component({
@@ -8,81 +8,63 @@ import { FRASES } from './frases-mock';
   templateUrl: './painel.component.html',
   styleUrls: ['./painel.component.css'],
 })
-export class PainelComponent implements OnInit, OnDestroy {
+export class PainelComponent implements OnInit {
 
-  @ViewChild("myInput") myInputField!: ElementRef;
+  @ViewChild("myInput") myInput!: ElementRef;
 
-  public frases: FraseModel[] = FRASES;
+  public frases: Frase[] = FRASES;
   public instrucao: string = 'Traduza a frase:';
   public resposta: string = '';
 
   public rodada: number = 0;
-  public rodadaFrase: FraseModel = {} as FraseModel;
+  public rodadaFrase: Frase = {} as Frase;
 
   public progresso: number = 0;
   public tentativas: number = 3;
 
   @Output() public encerrarJogo: EventEmitter<string> = new EventEmitter();
- 
+
   constructor() { }
-  
+
   ngOnInit(): void {
     this.atualizaRodada();
-  }
-
-  ngAfterViewInit(): void {
-    this.focus();
-  }
-
-  ngOnDestroy(): void {
   }
 
   public atualizaRodada(): void {
     this.rodadaFrase = this.frases[this.rodada];
     this.resposta = '';
 
-    if (this.rodada > 0) {
-      this.focus();
-    }
+    setTimeout(() => this.myInput.nativeElement.focus());
   }
 
-  public focus() {
-    this.myInputField.nativeElement.focus();
-  }
-
-  // Resposta é um objeto do tipo Event
+  // resposta é um objeto do tipo Event
   public atualizaResposta(resposta: Event): void {
     this.resposta = (<HTMLInputElement>resposta.target).value;
   }
 
   public verificarResposta(): void {
     if (this.resposta == this.rodadaFrase.frasePtBr) {
-
-      // Trocar pergunta da rodada
+      // trocar rodada
       this.rodada++;
 
       // Progresso
       this.progresso += (100 / this.frases.length);
 
-      // Encerramento: vitória
+      // encerramento: vitória
       if (this.rodada == 4) {
-        this.resposta = ''
-        
-        setTimeout(() => this.encerrarJogo.emit('vitória'), 2000);
-      } else {
-        this.atualizaRodada();
-      }
+        this.resposta = '';
 
+        setTimeout(() => this.encerrarJogo.emit('vitória'), 2000);
+      }
     } else {
       // Tentativas
       this.tentativas--;
 
-      // Encerramento: tente novamente
-      if (this.tentativas == -1) {
-        this.encerrarJogo.emit('tente novamente');
-      } else {
-        this.atualizaRodada();
-      }
+      // encerramento: tente novamente
+      if (this.tentativas == -1)
+        this.encerrarJogo.emit('tente novamente')
     }
+
+    this.atualizaRodada();
   }
 }
