@@ -1,4 +1,4 @@
-<h1 align="center">:two: Passaro Urbano :bird:</h1>
+<h1 align="center">:one: Aprendendo Inglês 👩‍🏫</h1>
 
 <p align="center">
   <a href="https://rogeriofrsouza.github.io/app1-aprendendo-ingles/" target="_blank">Page</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
