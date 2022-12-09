@@ -1,29 +1,51 @@
-https://rogeriofrsouza.github.io/app1-aprendendo-ingles/
+<h1 align="center">:two: Passaro Urbano :bird:</h1>
 
-# App1
+<p align="center">
+  <a href="https://rogeriofrsouza.github.io/app1-aprendendo-ingles/" target="_blank">Page</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-tech-stack">Tech Stack</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-project">Project</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-layout">Layout</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-license">License</a>
+</p>
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.1.2.
+<p align="center">
+  <a href="https://rogeriofrsouza.github.io/app2-passaro-urbano/" target="_blank">
+    <img alt="Preview" src="src/assets/aprendendo-ingles-preview.png" width="100%">
+  </a>
+</p>
+<br/>
 
-## Development server
+## 🚀 Tech Stack
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+This project was developed using these technologies:
 
-## Code scaffolding
+- <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-original.svg" height="28px" width="28px"/>
+  &nbsp;Angular
+- <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" height="28px" width="28px"/>
+  &nbsp;Bootstrap
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+<br/>
 
-## Build
+## 💻 Project
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- This is a initial and easy project for new Angular developers.
+- It's based on a gaming English learning platform.
+- 1st application developed in **Desenvolvimento WEB com JavaScript, TypeScript e Angular**. You can check the full course [here](https://www.udemy.com/course/curso-de-desenvolvimento-web-com-es6-typescript-e-angular-4/).
 
-## Running unit tests
+<br/>
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## 🔖 Layout
 
-## Running end-to-end tests
+Made by [Jorge Sant Ana](https://www.udemy.com/user/jorgetadeusantanasilva/) 👾
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+<br/>
 
-## Further help
+## 📝 License
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+This project is under MIT License. You can check [LICENSE](https://github.com/rogeriofrsouza/app1-aprendendo-ingles/blob/main/LICENSE) for more details.
+
+<br/>
+
+---
+
+Made with ♥ by Rogério :wave:
